@@ -1,7 +1,8 @@
 Source: tiff
 Section: libs
 Priority: optional
-Maintainer: Ondřej Surý <ondrej@debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
 Uploaders: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Build-Depends: autotools-dev,
                debhelper (>> 9),

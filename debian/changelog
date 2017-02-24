@@ -1,3 +1,132 @@
+tiff (4.0.6-1ubuntu0.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via crafted field data in an extension tag
+    - debian/patches/CVE-2015-7554.patch: add count to tools/tiffsplit.c.
+    - CVE-2015-7554
+  * SECURITY UPDATE: DoS and possible code execution via large width field
+    in a BMP image
+    - debian/patches/CVE-2015-8668.patch: properly calculate size in
+      tools/bmp2tiff.c.
+    - CVE-2015-8668
+  * SECURITY UPDATE: heap-buffer-overflow in tiffcrop
+    - debian/patches/CVE-2016-10092.patch: properly increment buffer in
+      tools/tiffcrop.c.
+    - CVE-2016-10092
+  * SECURITY UPDATE: heap-based buffer overflow in tiffcp
+    - debian/patches/CVE-2016-10093.patch: fix uint32 underflow/overflow
+      in tools/tiffcp.c.
+    - CVE-2016-10093
+  * SECURITY UPDATE: off-by-one error in tiff2pdf
+    - debian/patches/CVE-2016-10094.patch: fix count in tools/tiff2pdf.c.
+    - CVE-2016-10094
+  * SECURITY UPDATE: DoS in tiff2rgba tool
+    - debian/patches/CVE-2016-3622.patch: enforce bits-per-sample in
+      libtiff/tif_getimage.c, libtiff/tif_predict.c.
+    - CVE-2016-3622
+  * SECURITY UPDATE: DoS in rgb2ycbcr tool
+    - debian/patches/CVE-2016-3623.patch: validate parameters in
+      tools/rgb2ycbcr.c.
+    - CVE-2016-3623
+    - CVE-2016-3624
+  * SECURITY UPDATE: DoS and possible code execution via crafted TIFF image
+    - debian/patches/CVE-2016-3632.patch: disable BADFAXLINES in
+      tools/thumbnail.c.
+    - CVE-2016-3632
+    - CVE-2016-8331
+  * SECURITY UPDATE: DoS via out-of-bounds read
+    - debian/patches/CVE-2016-3658.patch: properly handle SamplesPerPixel
+      change in libtiff/tif_dir.c, avoid null pointer dereference in
+      libtiff/tif_dirwrite.c
+    - CVE-2016-3658
+  * SECURITY UPDATE: DoS and possible code execution in tiff2rgba tool
+    - debian/patches/CVE-2016-3945.patch: fix integer overflow in
+      tools/tiff2rgba.c.
+    - CVE-2016-3945
+  * SECURITY UPDATE: DoS and possible code execution via overflow in
+    horizontalDifference8 function
+    - debian/patches/CVE-2016-3990.patch: add check to
+      libtiff/tif_pixarlog.c.
+    - CVE-2016-3990
+  * SECURITY UPDATE: DoS and possible code execution in tiffcrop
+    - debian/patches/CVE-2016-3991.patch: add checks to tools/tiffcrop.c.
+    - CVE-2016-3991
+    - CVE-2016-5322
+  * SECURITY UPDATE: PixarLogDecode() out-of-bound writes
+    - debian/patches/CVE-2016-5314.patch: check size in
+      libtiff/tif_pixarlog.c.
+    - CVE-2016-5314
+    - CVE-2016-5315
+    - CVE-2016-5316
+    - CVE-2016-5317
+    - CVE-2016-5320
+    - CVE-2016-5875
+  * SECURITY UPDATE: DoS in DumpModeDecode function
+    - debian/patches/CVE-2016-5321.patch: limit number of samples in
+      tools/tiffcrop.c.
+    - CVE-2016-5321
+  * SECURITY UPDATE: DoS in _TIFFFax3fillruns function
+    - debian/patches/CVE-2016-5323.patch: limit number of samples in
+      tools/tiffcrop.c.
+    - CVE-2016-5323
+  * SECURITY UPDATE: DoS and possible code execution in tiff2pdf
+    - debian/patches/CVE-2016-5652.patch: properly handle markers in
+      tools/tiff2pdf.c.
+    - CVE-2016-5652
+  * SECURITY UPDATE: DoS and info disclosure via negative index
+    - debian/patches/CVE-2016-6223.patch: properly handle stripoffset in
+      libtiff/tif_read.c.
+    - CVE-2016-6223
+  * SECURITY UPDATE: DoS in tiffsplit
+    - debian/patches/CVE-2016-9273.patch: don't recompute value in
+      libtiff/tif_strip.c.
+    - CVE-2016-9273
+  * SECURITY UPDATE: DoS via crafted tag values
+    - debian/patches/CVE-2016-9297.patch: NULL-terminate values in
+      libtiff/tif_dirread.c.
+    - CVE-2016-9297
+  * SECURITY UPDATE: DoS caused by CVE-2016-9297
+    - debian/patches/CVE-2016-9448.patch: check for NULL in
+      libtiff/tif_dirread.c.
+    - CVE-2016-9448
+  * SECURITY UPDATE: DoS and possibe code execution via TIFFTAG_JPEGTABLES
+    of length one
+    - debian/patches/CVE-2016-9453.patch: fix counts in tools/tiff2pdf.c.
+    - CVE-2016-9453
+  * SECURITY UPDATE: integer overflow in writeBufferToSeparateStrips
+    - debian/patches/CVE-2016-9532.patch: check for overflows in
+      tools/tiffcrop.c.
+    - CVE-2016-9532
+  * SECURITY UPDATE: multiple out-of-bounds writes issues
+    - debian/patches/CVE-2016-9533.patch: fix out-of-bounds writes in
+      libtiff/tif_pixarlog.c, libtiff/tif_write.c, tools/tiff2pdf.c,
+      tools/tiffcrop.c.
+    - CVE-2016-9533
+    - CVE-2016-9534
+    - CVE-2016-9536
+    - CVE-2016-9537
+  * SECURITY UPDATE: assertion failure via unusual tile size
+    - debian/patches/CVE-2016-9535-1.patch: replace assertions with
+      runtime checks in libtiff/tif_predict.c, libtiff/tif_predict.h.
+    - debian/patches/CVE-2016-9535-2.patch: fix memory leaks in
+      libtiff/tif_predict.c.
+    - CVE-2016-9535
+  * SECURITY UPDATE: integer overflow in tiffcrop
+    - debian/patches/CVE-2016-9538.patch: fix undefined variable reads in
+      tools/tiffcp.c, tools/tiffcrop.c.
+    - CVE-2016-9538
+  * SECURITY UPDATE: out-of-bounds read in tiffcrop
+    - debian/patches/CVE-2016-9539.patch: check size in tools/tiffcrop.c.
+    - CVE-2016-9539
+  * SECURITY UPDATE: out-of-bounds write via odd tile width versus image
+    width
+    - debian/patches/CVE-2016-9540.patch: check bounds in tools/tiffcp.c.
+    - CVE-2016-9540
+  * SECURITY UPDATE: DoS or code execution via crafted BitsPerSample value
+    - debian/patches/CVE-2017-5225.patch: check bps in tools/tiffcp.c.
+    - CVE-2017-5225
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 24 Feb 2017 10:46:03 -0500
+
 tiff (4.0.6-1) unstable; urgency=high
 
   * New upstream release.
