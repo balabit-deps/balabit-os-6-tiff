@@ -1,3 +1,13 @@
+tiff (4.0.6-1ubuntu0.2) xenial-security; urgency=medium
+
+  * SECURITY REGRESSION: JPEG tiff read and write issue due to misapplied
+    patches (LP: #1670036)
+    - debian/patches/CVE-2016-9297_and_CVE-2016-9448_correct.patch: replace
+      two previous patches with one that applies fix to correct location.
+    - Thanks to John Cupitt and Even Rouault
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 29 May 2017 07:33:56 -0400
+
 tiff (4.0.6-1ubuntu0.1) xenial-security; urgency=medium
 
   * SECURITY UPDATE: DoS via crafted field data in an extension tag
