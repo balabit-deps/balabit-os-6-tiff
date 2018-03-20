@@ -1,3 +1,108 @@
+tiff (4.0.6-1ubuntu0.3) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: DoS in tif_read.c
+    - debian/patches/CVE-2016-10266.patch: fix uint32 overflow in
+      libtiff/tif_read.c, libtiff/tiffiop.h.
+    - CVE-2016-10266
+  * SECURITY UPDATE: DoS in tif_ojpeg.c
+    - debian/patches/CVE-2016-10267.patch: make OJPEGDecode() early exit in
+      case of failure in libtiff/tif_ojpeg.c.
+    - CVE-2016-10267
+  * SECURITY UPDATE: DoS in tif_unix.c
+    - debian/patches/CVE-2016-10268.patch: avoid uint32 underflow in
+      cpDecodedStrips in tools/tiffcp.c.
+    - CVE-2016-10268
+  * SECURITY UPDATE: DoS in tif_unix.c
+    - debian/patches/CVE-2016-10269.patch: fix heap-based buffer overflow
+      in libtiff/tif_luv.c, libtiff/tif_pixarlog.c.
+    - CVE-2016-10269
+  * SECURITY UPDATE: DoS in TIFFWriteDirectoryTagCheckedRational
+    - debian/patches/CVE-2016-10371.patch: replace assertion by runtime
+      check in libtiff/tif_dirwrite.c, tools/tiffcrop.c.
+    - CVE-2016-10371
+  * SECURITY UPDATE: DoS in putagreytile function
+    - debian/patches/CVE-2017-7592.patch: add explicit uint32 cast in
+      libtiff/tif_getimage.c.
+    - CVE-2017-7592
+  * SECURITY UPDATE: information disclosure in tif_read.c
+    - debian/patches/CVE-2017-7593.patch: use _TIFFcalloc() to zero in
+      libtiff/tif_read.c, libtiff/tif_unix.c, libtiff/tif_vms.c,
+      libtiff/tif_win32.c, libtiff/tiffio.h.
+    - CVE-2017-7593
+  * SECURITY UPDATE: DoS in OJPEGReadHeaderInfoSecTablesDcTable
+    - debian/patches/CVE-2017-7594-1.patch: fix leak in
+      libtiff/tif_ojpeg.c.
+    - debian/patches/CVE-2017-7594-2.patch: fix another leak in
+      libtiff/tif_ojpeg.c.
+    - CVE-2017-7594
+  * SECURITY UPDATE: DoS in JPEGSetupEncode
+    - debian/patches/CVE-2017-7595.patch: avoid integer division by zero in
+      libtiff/tif_jpeg.c.
+    - CVE-2017-7595
+  * SECURITY UPDATE: DoS via undefined behaviour
+    - debian/patches/CVE-2017-7596_7597_7599_7600.patch: avoir undefined
+      behaviour in libtiff/tif_dir.c, libtiff/tif_dirread.c,
+      libtiff/tif_dirwrite.c.
+    - CVE-2017-7596
+    - CVE-2017-7597
+    - CVE-2017-7599
+    - CVE-2017-7600
+  * SECURITY UPDATE: DoS via divide-by-zero
+    - debian/patches/CVE-2017-7598.patch: avoid division by floating point
+      0 in libtiff/tif_dirread.c.
+    - CVE-2017-7598
+  * SECURITY UPDATE: DoS via undefined behaviour
+    - debian/patches/CVE-2017-7601.patch: validate BitsPerSample in
+      libtiff/tif_jpeg.c.
+    - CVE-2017-7601
+  * SECURITY UPDATE: signed integer overflow
+    - debian/patches/CVE-2017-7602.patch: avoid potential undefined
+      behaviour in libtiff/tif_read.c.
+    - CVE-2017-7602
+  * SECURITY UPDATE: DoS via memory leak
+    - debian/patches/CVE-2017-9403_9815.patch: fix memory leak in
+      libtiff/tif_dirread.c, tools/tiff2ps.c.
+    - CVE-2017-9403
+    - CVE-2017-9815
+  * SECURITY UPDATE: DoS via memory leak
+    - debian/patches/CVE-2017-9404.patch: fix potential memory leak in
+      libtiff/tif_ojpeg.c.
+    - CVE-2017-9404
+  * SECURITY UPDATE: DoS via memory leak
+    - debian/patches/CVE-2017-9936.patch: fix memory leak in
+      libtiff/tif_jbig.c.
+    - CVE-2017-9936
+  * SECURITY UPDATE: DoS via assertion
+    - debian/patches/CVE-2017-10688.patch: replace assertion in
+      libtiff/tif_dirwrite.c.
+    - CVE-2017-10688
+  * SECURITY UPDATE: heap overflow in tiff2pdf.c
+    - debian/patches/CVE-2017-11335.patch: prevent heap buffer overflow
+      write in tools/tiff2pdf.c.
+    - CVE-2017-11335
+  * SECURITY UPDATE: DoS in TIFFReadDirEntryArray
+    - debian/patches/CVE-2017-12944.patch: add protection against excessive
+      memory allocation attempts in libtiff/tif_dirread.c.
+    - CVE-2017-12944
+  * SECURITY UPDATE: DoS via assertion
+    - debian/patches/CVE-2017-13726.patch: replace assertion in
+      libtiff/tif_dirwrite.c.
+    - CVE-2017-13726
+  * SECURITY UPDATE: DoS via assertion
+    - debian/patches/CVE-2017-13727.patch: replace assertion in
+      libtiff/tif_dirwrite.c.
+    - CVE-2017-13727
+  * SECURITY UPDATE: null pointer dereference
+    - debian/patches/CVE-2017-18013.patch: fix null pointer dereference in
+      libtiff/tif_print.c.
+    - CVE-2017-18013
+  * SECURITY UPDATE: DoS via resource consumption
+    - debian/patches/CVE-2018-5784.patch: fix infinite loop in
+      contrib/addtiffo/tif_overview.c, tools/tiff2pdf.c, tools/tiffcrop.c.
+    - CVE-2018-5784
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 20 Mar 2018 08:00:42 -0400
+
 tiff (4.0.6-1ubuntu0.2) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: JPEG tiff read and write issue due to misapplied
