@@ -1,3 +1,42 @@
+tiff (4.0.6-1ubuntu0.4) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: buffer overflow in gif2tiff
+    - debian/patches/CVE-2016-3186.patch: check return code in
+      tools/gif2tiff.c.
+    - CVE-2016-3186
+  * SECURITY UPDATE: buffer overflow in gif2tiff
+    - debian/patches/CVE-2016-5102.patch: make warning fatal in
+      tools/gif2tiff.c.
+    - CVE-2016-5102
+  * SECURITY UPDATE: multiple overflows
+    - debian/patches/CVE-2016-5318.patch: ignore certain fields in
+      libtiff/tif_dir.h, libtiff/tif_dirinfo.c, libtiff/tif_dirread.c.
+    - CVE-2016-5318
+    - CVE-2017-9147
+  * SECURITY UPDATE: bmp2tiff issues
+    - debian/patches/CVE-2017-5563_9117.patch: add check to
+      tools/bmp2tiff.c.
+    - CVE-2017-5563
+    - CVE-2017-9117
+  * SECURITY UPDATE: heap-based buffer overflow in t2p_write_pdf
+    - debian/patches/CVE-2017-9935-1.patch: fix transfer function handling
+      in libtiff/tif_dir.c, tools/tiff2pdf.c.
+    - debian/patches/CVE-2017-9935-2.patch: fix incorrect type for transfer
+      table in tools/tiff2pdf.c.
+    - CVE-2017-9935
+  * SECURITY UPDATE: DoS in TIFFOpen
+    - debian/patches/CVE-2017-11613-1.patch: avoid memory exhaustion in
+      libtiff/tif_dirread.c.
+    - debian/patches/CVE-2017-11613-2.patch: rework fix in
+      libtiff/tif_dirread.c.
+    - CVE-2017-11613
+  * SECURITY UPDATE: TIFFSetupStrips heap overflow in pal2rgb
+    - debian/patches/CVE-2017-17095.patch: add workaround to
+      tools/pal2rgb.c.
+    - CVE-2017-17095
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 22 Mar 2018 10:16:37 -0400
+
 tiff (4.0.6-1ubuntu0.3) xenial-security; urgency=medium
 
   * SECURITY UPDATE: DoS in tif_read.c
