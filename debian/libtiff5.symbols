@@ -191,6 +191,8 @@ libtiff.so.5 libtiff5 #MINVER#
  TIFFYCbCrtoRGB@LIBTIFF_4.0 4.0.3
  XYZtoRGB24@LIBTIFF_4.0 4.0.3
  _TIFFBuiltinCODECS@LIBTIFF_4.0 4.0.3
+ _TIFFCastUInt64ToSSize@LIBTIFF_4.0 4.0.6-1ubuntu0.7
+ _TIFFCheckFieldIsValidForCodec@LIBTIFF_4.0 4.0.6-1ubuntu0.7
  _TIFFCheckMalloc@LIBTIFF_4.0 4.0.3
  _TIFFCheckRealloc@LIBTIFF_4.0 4.0.3
  _TIFFCreateAnonField@LIBTIFF_4.0 4.0.3
@@ -206,6 +208,7 @@ libtiff.so.5 libtiff5 #MINVER#
  _TIFFMergeFields@LIBTIFF_4.0 4.0.3
  _TIFFMultiply32@LIBTIFF_4.0 4.0.3
  _TIFFMultiply64@LIBTIFF_4.0 4.0.3
+ _TIFFMultiplySSize@LIBTIFF_4.0 4.0.6-1ubuntu0.7
  _TIFFNoFixupTags@LIBTIFF_4.0 4.0.3
  _TIFFNoPostDecode@LIBTIFF_4.0 4.0.3
  _TIFFNoPreCode@LIBTIFF_4.0 4.0.3
@@ -226,6 +229,7 @@ libtiff.so.5 libtiff5 #MINVER#
  _TIFFSwab64BitData@LIBTIFF_4.0 4.0.3
  _TIFFUInt64ToDouble@LIBTIFF_4.0 4.0.3
  _TIFFUInt64ToFloat@LIBTIFF_4.0 4.0.3
+ _TIFFcalloc@LIBTIFF_4.0 4.0.6-1ubuntu0.7
  _TIFFerrorHandler@LIBTIFF_4.0 4.0.3
  _TIFFerrorHandlerExt@LIBTIFF_4.0 4.0.3
  _TIFFfree@LIBTIFF_4.0 4.0.3
